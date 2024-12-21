@@ -55,6 +55,32 @@ Function composition combines two or more functions to create a new function.
 // 5. IIFE (Immediately Invoked Function Expressions)
 // An IIFE is a function that runs immediately after it is defined.
 
+IIFE stands for Immediately Invoked Function Expression. It's a JavaScript function that runs as soon as it is defined. This is often used to create a local scope for variables, to avoid polluting the global scope.
+
+The syntax for an IIFE looks like this:
+
+javascript
+(function() {
+  // Function logic here
+})();
+
+or
+
+(function() {
+  // Function logic here
+}());
+Here's a simple example:
+
+javascript
+(function() {
+  var message = "Hello, I am an IIFE!";
+  console.log(message);
+})();
+In this example, the function is defined and immediately executed. The variable message is scoped to the function and cannot be accessed outside of it.
+
+IIFEs are particularly useful when you want to create a new scope to encapsulate variables and avoid conflicts, especially in large projects or when integrating different scripts.
+They are also commonly used in JavaScript modules and libraries.
+    
 // Example:
 (function () {
     console.log('This is an IIFE!');
