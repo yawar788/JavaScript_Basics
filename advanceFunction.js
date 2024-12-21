@@ -1,6 +1,6 @@
 // Advanced Functions 
-// Understanding advanced topics in JavaScript functions is crucial as they form the
-// backbone of the language. Here, we'll delve deep into the following advanced topics:
+Basic Functions
+A basic function in JavaScript is a reusable block of code designed to perform a specific task.
 
 // 1. Closures
 // A closure is a function that retains access to its lexical scope, even when executed 
@@ -21,6 +21,21 @@
 // 2. Higher-Order Functions
 // Functions that can take other functions as arguments or return functions are called 
 // higher-order functions.
+
+Higher-order functions are functions that can take other functions as arguments 
+or return them as results.
+
+Example: Using Functions as Arguments
+javascript
+function greetUser(callback, name) {
+  callback(name);
+}
+
+function sayHello(name) {
+  console.log("Hello, " + name + "!");
+}
+
+greetUser(sayHello, "Bob"); // "Hello, Bob!"
 
 // Example:
 function multiplyBy(factor) {
