@@ -70,7 +70,9 @@ Function composition combines two or more functions to create a new function.
 // 5. IIFE (Immediately Invoked Function Expressions)
 // An IIFE is a function that runs immediately after it is defined.
 
-IIFE stands for Immediately Invoked Function Expression. It's a JavaScript function that runs as soon as it is defined. This is often used to create a local scope for variables, to avoid polluting the global scope.
+IIFE stands for Immediately Invoked Function Expression. It's a JavaScript function 
+that runs as soon as it is defined. This is often used to create a local scope for variables,
+to avoid polluting the global scope.
 
 The syntax for an IIFE looks like this:
 
@@ -91,9 +93,11 @@ javascript
   var message = "Hello, I am an IIFE!";
   console.log(message);
 })();
-In this example, the function is defined and immediately executed. The variable message is scoped to the function and cannot be accessed outside of it.
+In this example, the function is defined and immediately executed. The variable message 
+is scoped to the function and cannot be accessed outside of it.
 
-IIFEs are particularly useful when you want to create a new scope to encapsulate variables and avoid conflicts, especially in large projects or when integrating different scripts.
+IIFEs are particularly useful when you want to create a new scope to encapsulate variables
+and avoid conflicts, especially in large projects or when integrating different scripts.
 They are also commonly used in JavaScript modules and libraries.
     
 // Example:
@@ -135,3 +139,62 @@ const obj = {
 obj.greet(); // Output: Hello, Yawar
 Explanation:
 Arrow functions make managing this easier in callbacks and event handlers.
+
+Parameters
+Parameters are the variables listed as a part of the function's definition. You can
+pass values into these parameters when calling the function.
+
+javascript
+function greet(name, timeOfDay) {
+    console.log(`Good ${timeOfDay}, ${name}!`);
+}
+
+greet('Alice', 'morning'); // Output: Good morning, Alice!
+greet('Bob', 'evening');   // Output: Good evening, Bob!
+Default Parameter Values
+Default parameter values provide a way to set default values for parameters in case no 
+argument is passed or if undefined is passed. This can prevent errors and allow developers
+to call functions with fewer arguments.
+
+Here's how you define default parameter values:
+
+javascript
+function greet(name, timeOfDay = 'day') {
+    console.log(`Good ${timeOfDay}, ${name}!`);
+}
+
+greet('Alice');       // Output: Good day, Alice!
+greet('Bob', 'night'); // Output: Good night, Bob!
+In this example, if timeOfDay is not provided, it defaults to 'day'.
+
+Combining Parameters
+You can combine regular and default parameters to make your functions more versatile.
+
+javascript
+function makeGreeting(name, greeting = 'Hello', punctuation = '!') {
+    console.log(`${greeting}, ${name}${punctuation}`);
+}
+
+makeGreeting('Alice');                  // Output: Hello, Alice!
+makeGreeting('Bob', 'Good Evening');    // Output: Good Evening, Bob!
+makeGreeting('Eve', 'Hi', '!!');        // Output: Hi, Eve!!
+
+Spread and Rest Parameters
+The spread operator (...) allows you to handle multiple parameters more flexibly. 
+It can be used to pass an array of arguments to a function.
+
+javascript
+function sum(...numbers) {
+    return numbers.reduce((acc, num) => acc + num, 0);
+}
+
+console.log(sum(1, 2, 3));    // Output: 6
+console.log(sum(4, 5, 6, 7)); // Output: 22
+In this example, using the rest parameter (...numbers), the function sum can accept any 
+number of arguments and process them as an array.
+
+These features help make JavaScript functions more powerful and versatile, enabling you 
+to write cleaner and more maintainable code. If you're curious about more advanced uses 
+or have specific use cases, let me know—I’d be glad to dive deeper!
+
+
