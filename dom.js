@@ -64,7 +64,8 @@
 
 
 // Adding and Removing Elements
-// You can dynamically add or remove elements using methods like appendChild(), removeChild(), and createElement():
+// You can dynamically add or remove elements using methods like appendChild(), removeChild(),
+// and createElement():
 
 // html
 // <!DOCTYPE html>
@@ -94,4 +95,31 @@
 // </html>
 
 
+// Event Handling
+// You can attach event handlers to DOM elements to make interactive content:
 
+// html
+// <!DOCTYPE html>
+// <html>
+// <body>
+
+// <button id="myButton">Click me</button>
+
+// <p id="output"></p>
+
+// <script>
+// // Get the button element
+// var button = document.getElementById('myButton');
+
+// // Add event listener
+// button.addEventListener('click', function() {
+//   var output = document.getElementById('output');
+//   output.textContent = 'Button was clicked!';
+// });
+// </script>
+
+// </body>
+// </html>
+// The above examples demonstrate how the DOM can be used to manipulate and interact with
+// the document's content dynamically. As you explore further, you'll find many other methods
+// and properties available to make your web pages more dynamic and responsive
