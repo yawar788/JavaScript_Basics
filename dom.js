@@ -214,6 +214,50 @@
 // use event listener in examples as well
 // Got it! Here are the previous examples, but this time we'll include event listeners to demonstrate their usage.
 
+
+// Remove Event Listeners
+// You can also remove an event listener using the removeEventListener method. This method requires
+// that the event listener is defined as a named function:
+
+// html
+// <!DOCTYPE html>
+// <html>
+// <body>
+
+// <button id="myButton">Click me</button>
+// <button id="removeButton">Remove Click</button>
+// <p id="output"></p>
+
+// <script>
+// function displayMessage() {
+//   document.getElementById('output').textContent = 'Button was clicked!';
+// }
+
+// var clickButton = document.getElementById('myButton');
+// clickButton.addEventListener('click', displayMessage);
+
+// document.getElementById('removeButton').addEventListener('click', function() {
+//   clickButton.removeEventListener('click', displayMessage);
+//   document.getElementById('output').textContent = 'Click event removed!';
+// });
+// </script>
+
+// </body>
+// </html>
+// In this example:
+
+// We define displayMessage as a named function.
+
+// We attach the displayMessage function as an event listener to the button with the id myButton.
+
+// When the "Remove Click" button is clicked, we remove the event listener from the first button.
+
+// Event listeners are essential for making your web pages interactive and responsive to user actions. 
+// By attaching event listeners to DOM elements, you can create a more engaging user experience.
+// If you have specific scenarios or types of events you'd like to explore further, just let me know!
+
+
+
 // Event Handling
 // You can attach event handlers to DOM elements to make interactive content:
 
