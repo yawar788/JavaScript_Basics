@@ -61,3 +61,37 @@
 
 // </body>
 // </html>
+
+
+// Adding and Removing Elements
+// You can dynamically add or remove elements using methods like appendChild(), removeChild(), and createElement():
+
+// html
+// <!DOCTYPE html>
+// <html>
+// <body>
+
+// <ul id="list">
+//   <li>Item 1</li>
+//   <li>Item 2</li>
+// </ul>
+
+// <script>
+// // Create new list item
+// var newItem = document.createElement('li');
+// newItem.textContent = 'Item 3';
+
+// // Add it to the list
+// var list = document.getElementById('list');
+// list.appendChild(newItem); // Adds "Item 3" to the list
+
+// // Remove an item
+// var secondItem = list.getElementsByTagName('li')[1];
+// list.removeChild(secondItem);  // Removes "Item 2" from the list
+// </script>
+
+// </body>
+// </html>
+
+
+
