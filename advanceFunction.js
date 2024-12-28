@@ -1,3 +1,4 @@
+
 // Advanced Functions 
 Basic Functions\
 A basic function in JavaScript is a reusable block of code designed to perform a specific task.
