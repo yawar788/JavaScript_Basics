@@ -21,6 +21,8 @@
 // // Accessing by ID
 // var heading = document.getElementById('myHeading');
 // console.log(heading.textContent); // Output: Hello World
+// console.log(heading.innerHTML); // Output: Hello World
+// console.log(heading.innerText); // Output: Hello World
 
 // // Accessing by Class
 // var paragraphs = document.getElementsByClassName('myClass');
