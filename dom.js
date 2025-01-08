@@ -97,7 +97,7 @@
 // </html>
 
 
-// Certainly! Event listeners in JavaScript are methods that allow you to handle the different events
+// Event listeners in JavaScript are methods that allow you to handle the different events
 // that occur in the browser, such as a user clicking a button, typing in a field, or any other user 
 // interaction with the elements on a webpage.
 
