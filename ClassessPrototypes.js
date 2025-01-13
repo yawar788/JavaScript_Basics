@@ -117,3 +117,95 @@ const spot = new Dog('Spot');
 // Using the methods
 spot.eat(); // Output: Eating...
 spot.bark(); // Output: Woof!
+
+
+Prototypes in JavaScript
+Basic Definition of Prototypes
+In JavaScript, every object can have a prototype, which is another object that it inherits methods and properties from. This mechanism allows for the sharing of methods and properties between objects.
+
+Prototypal Inheritance
+Prototypal inheritance means an object inherits properties and methods from another object. This is done by linking the prototype of one object to another object.
+
+Example of Prototypal Inheritance
+javascript
+// Define a constructor function
+function Vehicle(type) {
+    this.type = type;
+}
+
+// Add a method to the Vehicle prototype
+Vehicle.prototype.describe = function() {
+    return `This is a ${this.type}.`;
+};
+
+// Define another constructor function
+function Car(type, brand) {
+    Vehicle.call(this, type);
+    this.brand = brand;
+}
+
+// Set the prototype of Car to an instance of Vehicle
+Car.prototype = Object.create(Vehicle.prototype);
+
+// Restore the constructor property
+Car.prototype.constructor = Car;
+
+// Add a method to the Car prototype
+Car.prototype.getBrand = function() {
+    return `This car is a ${this.brand}.`;
+};
+
+// Create an instance of Car
+const myCar = new Car('sedan', 'Toyota');
+
+// Use the methods from Car and Vehicle prototypes
+console.log(myCar.describe()); // Output: This is a sedan.
+console.log(myCar.getBrand()); // Output: This car is a Toyota.
+Classes in JavaScript
+Basic Definition of Classes
+Classes in JavaScript are a more convenient and cleaner syntax for creating objects and handling inheritance, introduced in ECMAScript 2015 (ES6). They are essentially syntactical sugar over JavaScript's existing prototype-based inheritance.
+
+Class-based Inheritance
+Class-based inheritance involves defining a class (parent/superclass) which other classes (subclasses) can inherit from. The subclasses can then use and extend the properties and methods of the parent class.
+
+Example of Class-based Inheritance
+javascript
+// Define a base class
+class Vehicle {
+    constructor(type) {
+        this.type = type;
+    }
+
+    describe() {
+        return `This is a ${this.type}.`;
+    }
+}
+
+// Define a subclass
+class Car extends Vehicle {
+    constructor(type, brand) {
+        super(type); // Call the parent class constructor
+        this.brand = brand;
+    }
+
+    getBrand() {
+        return `This car is a ${this.brand}.`;
+    }
+}
+
+// Create an instance of Car
+const myCar = new Car('sedan', 'Toyota');
+
+// Use the methods from Car and Vehicle class
+console.log(myCar.describe()); // Output: This is a sedan.
+console.log(myCar.getBrand()); // Output: This car is a Toyota.
+Comparison of Prototypal Inheritance and Class-based Inheritance
+Characteristic	Prototypal Inheritance	Class-based Inheritance
+Syntax	More verbose and requires more manual setup	Cleaner and more readable
+Inheritance Model	Relies on linking prototypes explicitly	Uses extends keyword, making it straightforward
+Method Addition	Added directly to the prototype	Defined inside the class
+Constructor	Functions serve as constructors	constructor method inside the class
+Key Takeaways
+Prototypes: Good when you need direct control over inheritance and prototypal links.
+
+Classes: Useful for cleaner, more readable code that is easy to maintain, especially for those familiar with traditional OOP.
