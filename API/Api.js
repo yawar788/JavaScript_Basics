@@ -39,3 +39,121 @@
 //     .then(response => response.json())
 //     .then(data => console.log(data))
 //     .catch(error => console.error('Error:', error));
+
+
+// Interacting with API Endpoints
+// GET Request
+// Example: Fetching user data from a placeholder API.
+
+// javascript
+// fetch('https://jsonplaceholder.typicode.com/users')
+//     .then(response => response.json())
+//     .then(data => console.log(data));
+// POST Request
+// Concept: Sending data to an API, for example, creating a new user.
+
+// Example:
+
+// javascript
+// fetch('https://jsonplaceholder.typicode.com/posts', {
+//     method: 'POST',
+//     headers: {
+//         'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//         title: 'foo',
+//         body: 'bar',
+//         userId: 1
+//     })
+// })
+//     .then(response => response.json())
+//     .then(data => console.log(data));
+// Intermediate: Handling Authentication
+// API Key Authentication
+// Example: Adding an API key to the header.
+
+// javascript
+// fetch('https://api.example.com/data', {
+//     headers: {
+//         'Authorization': 'Bearer YOUR_API_KEY'
+//     }
+// })
+//     .then(response => response.json())
+//     .then(data => console.log(data));
+// Advanced: Error Handling and Async/Await
+// Error Handling
+// Example: Improved error handling in fetch requests.
+
+// javascript
+// fetch('https://api.example.com/data')
+//     .then(response => {
+//         if (!response.ok) {
+//             throw new Error('Network response was not ok');
+//         }
+//         return response.json();
+//     })
+//     .then(data => console.log(data))
+//     .catch(error => console.error('There was a problem with your fetch operation:', error));
+// Async/Await
+// Concept: Using async and await to handle asynchronous operations more cleanly.
+
+// Example: Fetching data with async/await.
+
+// javascript
+// async function fetchData() {
+//     try {
+//         const response = await fetch('https://api.example.com/data');
+//         if (!response.ok) {
+//             throw new Error('Network response was not ok');
+//         }
+//         const data = await response.json();
+//         console.log(data);
+//     } catch (error) {
+//         console.error('There was a problem with your fetch operation:', error);
+//     }
+// }
+
+// fetchData();
+// Advanced: Using Libraries like Axios
+// Concept: Using Axios, a promise-based HTTP client for easier API requests.
+
+// Example: Basic GET request with Axios.
+
+// javascript
+// import axios from 'axios';
+
+// axios.get('https://api.example.com/data')
+//     .then(response => {
+//         console.log(response.data);
+//     })
+//     .catch(error => {
+//         console.error('There was an error!', error);
+//     });
+// Example: POST request with Axios.
+
+// javascript
+// axios.post('https://api.example.com/posts', {
+//     title: 'foo',
+//     body: 'bar',
+//     userId: 1
+// })
+//     .then(response => {
+//         console.log(response.data);
+//     })
+//     .catch(error => {
+//         console.error('There was an error!', error);
+//     });
+// Asynchronous Operations with Multiple Requests
+// Example: Making multiple requests with Promise.all.
+
+// javascript
+// async function fetchMultipleData() {
+//     const [users, posts] = await Promise.all([
+//         fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()),
+//         fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json())
+//     ]);
+//     console.log(users);
+//     console.log(posts);
+// }
+
+// fetchMultipleData();
