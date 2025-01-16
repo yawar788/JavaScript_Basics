@@ -169,4 +169,4 @@
 //     .then(data => {
 //         console.log(`Cat Fact: ${data.fact}`);
 //     })
-//     .catch(error => console.error('Error:'
+//     .catch(error => console.error('Error:',error))
