@@ -157,3 +157,16 @@
 // }
 
 // fetchMultipleData();
+
+
+// Cat Facts API
+// Goal: Fetch random interesting facts about cats.
+
+// Example:
+// javascript
+// fetch('https://catfact.ninja/fact')
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(`Cat Fact: ${data.fact}`);
+//     })
+//     .catch(error => console.error('Error:'
