@@ -49,9 +49,9 @@
 // fetch('https://jsonplaceholder.typicode.com/users')
 //     .then(response => response.json())
 //     .then(data => console.log(data));
+
 // POST Request
 // Concept: Sending data to an API, for example, creating a new user.
-
 // Example:
 
 // javascript
