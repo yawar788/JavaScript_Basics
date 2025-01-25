@@ -11,6 +11,31 @@
 
 // JSON/XML: Common data formats used to structure the data being sent and received.
 
+// AJAX (Asynchronous JavaScript and XML)
+// AJAX allows you to send and receive data asynchronously without refreshing the web page.
+
+// You can use the XMLHttpRequest object or the modern fetch API to make AJAX requests.
+
+// 2. Fetch API
+// The fetch API is a modern and simpler way to make HTTP requests.
+
+// It returns a promise that resolves to the Response object representing the response to the request.
+
+// 3. JSON (JavaScript Object Notation)
+// JSON is a lightweight data interchange format that's easy for humans to read and write and easy for machines 
+// to parse and generate.
+
+const data = {
+  name: "John Doe",
+  age: 30
+};
+
+const jsonString = JSON.stringify(data); // Convert JavaScript object to JSON string
+const jsObject = JSON.parse(jsonString); // Convert JSON string to JavaScript object
+
+
+// It's commonly used to exchange data between a server and a web application.
+
 // Authentication: Different ways to verify the client/app making the request (e.g., API key, OAuth).
 
 // Getting Started
