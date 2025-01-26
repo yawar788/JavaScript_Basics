@@ -1,11 +1,4 @@
-function showTime() {
-	document.getElementById('currentTime').innerHTML = new Date().toUTCString();
-}
-showTime();
-setInterval(function () {
-	showTime();
-}, 1000);
-
+// Using XMLHttpRequest method instead of modern fetch
 const requestUrl='https://api.github.com/users/yawar788';
 const xhr=new XMLHttpRequest();
 xhr.open('GET',requestUrl);
