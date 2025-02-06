@@ -1,4 +1,3 @@
-
 // APIs (Application Programming Interfaces)
 // An API, or Application Programming Interface, is a set of rules and protocols that allows different software applications to 
 // communicate with each other. Think of it as a bridge that enables software programs to interact and exchange information seamlessly.
