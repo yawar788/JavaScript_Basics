@@ -50,3 +50,25 @@
 
 // .catch((error) => {...}): This method is called when the promise is rejected. 
 // It takes a function that receives the error.
+
+
+// Promise Chaining
+// Promises can also be chained to handle multiple asynchronous operations in a sequence:
+
+// myPromise
+//   .then((message) => {
+//     console.log(message);
+//     return "Next step."; // Return a value to pass to the next then
+//   })
+//   .then((nextMessage) => {
+//     console.log(nextMessage); // This will log "Next step."
+//   })
+//   .catch((error) => {
+//     console.log(error); // This will catch any errors in the chain
+//   });
+
+// Comments in the Code:
+
+// return "Next step.": The return value of one .then is passed to the next .then as an argument.
+// .then((nextMessage) => {...}): This .then will receive the value returned from the previous .then.
+// .catch((error) => {...}): This .catch will handle any errors that occur in the promise chain.
