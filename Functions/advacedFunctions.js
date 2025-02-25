@@ -23,11 +23,8 @@ A basic function in JavaScript is a reusable block of code designed to perform a
 // Functions that can take other functions as arguments or return functions are called 
 // higher-order functions.
 
-Higher-order functions are functions that can take other functions as arguments 
-or return them as results.
-
-Example: Using Functions as Arguments
-javascript
+// Example: Using Functions as Arguments
+// javascript
 function greetUser(callback, name) {
   callback(name);
 }
@@ -52,8 +49,8 @@ console.log(double(5)); // Output: 10
 // multiplyBy returns a function, making it a higher-order function. This enables 
 // dynamic behavior customization.
 
-4. Function Composition
-Function composition combines two or more functions to create a new function.
+// 4. Function Composition
+// Function composition combines two or more functions to create a new function.
 
 // Example:
 // const add = (x) => x + 2;
@@ -70,12 +67,10 @@ Function composition combines two or more functions to create a new function.
 
 // 5. IIFE (Immediately Invoked Function Expressions)
 // An IIFE is a function that runs immediately after it is defined.
+// It's a JavaScript function 
+// that runs as soon as it is defined. This is often used to create a local scope for variables,
+// to avoid polluting the global scope.
 
-IIFE stands for Immediately Invoked Function Expression. It's a JavaScript function 
-that runs as soon as it is defined. This is often used to create a local scope for variables,
-to avoid polluting the global scope.
-
-The syntax for an IIFE looks like this:
 
 javascript
 (function() {
@@ -88,27 +83,18 @@ or
   // Function logic here
 }());
 Here's a simple example:
-
 javascript
 (function() {
   var message = "Hello, I am an IIFE!";
   console.log(message);
 })();
-In this example, the function is defined and immediately executed. The variable message 
-is scoped to the function and cannot be accessed outside of it.
+// In this example, the function is defined and immediately executed. The variable message 
+// is scoped to the function and cannot be accessed outside of it.
 
-IIFEs are particularly useful when you want to create a new scope to encapsulate variables
-and avoid conflicts, especially in large projects or when integrating different scripts.
-They are also commonly used in JavaScript modules and libraries.
+// IIFEs are particularly useful when you want to create a new scope to encapsulate variables
+// and avoid conflicts, especially in large projects or when integrating different scripts.
+// They are also commonly used in JavaScript modules and libraries.
     
-// Example:
-(function () {
-    console.log('This is an IIFE!');
-})();
-
-// Explanation:
-// Useful for creating isolated scopes to prevent variable pollution.
-
 
 // 6. Recursion
 // Recursion is when a function calls itself.
@@ -123,8 +109,8 @@ console.log(factorial(5)); // Output: 120
 // Explanation:
 // The function keeps calling itself with smaller values until a base condition is met.
 
-7. Arrow Functions and Lexical this
-Arrow functions don’t have their own this; they inherit this from their surrounding context.
+// 7. Arrow Functions and Lexical this
+// Arrow functions don’t have their own this; they inherit this from their surrounding context.
 
 Example:
 const obj = {
@@ -138,12 +124,12 @@ const obj = {
 };
 
 obj.greet(); // Output: Hello, Yawar
-Explanation:
-Arrow functions make managing this easier in callbacks and event handlers.
+// Explanation:
+// Arrow functions make managing this easier in callbacks and event handlers.
 
-Parameters
-Parameters are the variables listed as a part of the function's definition. You can
-pass values into these parameters when calling the function.
+// Parameters
+// Parameters are the variables listed as a part of the function's definition. You can
+// pass values into these parameters when calling the function.
 
 javascript
 function greet(name, timeOfDay) {
@@ -152,12 +138,12 @@ function greet(name, timeOfDay) {
 
 greet('Alice', 'morning'); // Output: Good morning, Alice!
 greet('Bob', 'evening');   // Output: Good evening, Bob!
-Default Parameter Values
-Default parameter values provide a way to set default values for parameters in case no 
-argument is passed or if undefined is passed. This can prevent errors and allow developers
-to call functions with fewer arguments.
+// Default Parameter Values
+// Default parameter values provide a way to set default values for parameters in case no 
+// argument is passed or if undefined is passed. This can prevent errors and allow developers
+// to call functions with fewer arguments.
 
-Here's how you define default parameter values:
+// Here's how you define default parameter values:
 
 javascript
 function greet(name, timeOfDay = 'day') {
@@ -195,5 +181,4 @@ In this example, using the rest parameter (...numbers), the function sum can acc
 number of arguments and process them as an array.
 
 These features help make JavaScript functions more powerful and versatile, enabling you 
-to write cleaner and more maintainable code. If you're curious about more advanced uses 
-or have specific use cases, let me know—I’d be glad to dive deeper!
+to write cleaner and more maintainable code.
