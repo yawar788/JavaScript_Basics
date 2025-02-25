@@ -1,3 +1,4 @@
+
 // Functions are a fundamental building block in JavaScript. They allow you to encapsulate 
 // reusable code blocks, making your programs modular, readable, and maintainable. Let’s 
 // start with the basics and gradually move to advanced topics with examples.
